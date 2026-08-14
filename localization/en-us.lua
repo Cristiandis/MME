@@ -6,6 +6,14 @@ return {
                 text = {
                     "Does nothing"
                 }
+            },
+            p_mme_unieuro = {
+                name = "Unieuro Booster Pack",
+                text = {
+                    "Pick {C:attention}#1#{} card out",
+                    "of {C:attention}#2#{} Phone Jokers"
+                }
+
             }
         },
         Tarot = {
@@ -85,6 +93,29 @@ return {
                         "at end of round",
                         "{C:blue}Status: {C:attention}#6#"
                     },
+                }
+            },
+            j_mme_google = {
+                name = "Google",
+                text = {
+                    {
+                        "{C:mult}+#1# mult{} when {C:attention}scoring card{} has no enhancement"
+                    },
+                    {
+                        "{C:edition}If bootloader is unlocked{}",
+                        "{C:attention}Gains{} a random power every round",
+                        "{C:disabled}Current power:{}",
+                        "#3#",
+                        "{C:blue}Status: {C:attention}#2#"
+                    },
+                }
+            },
+            j_mme_paypal_mod = {
+                name = "PayPal Mod APK",
+                text = {
+                    "Gives {C:money}#1#${} at the end of every round",
+                    "{C:green}#2# in #3#{} chance to",
+                    "set money to {C:red}0${}",
                 }
             }
         }

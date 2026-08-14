@@ -1,10 +1,11 @@
 SMODS.Joker {
     key = "samsung",
-    atlas = "placeholders",
+    atlas = "bootloaders",
     pos = { x = 2, y = 0 },
     discovered = true,
     rarity = 3,
     cost = 5,
+    pools = { ["Phones"] = true },
     config = {
         extra = {
             dollar = 1,
@@ -26,6 +27,8 @@ SMODS.Joker {
         end
     end,
     calculate = function(self, card, context)
+        local voucher_active = G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers['v_mme_boot_unlock']
+
         if context.joker_main then
             return {
                 xmult = card.ability.extra.Xmult,
@@ -33,7 +36,7 @@ SMODS.Joker {
         end
 
         if context.end_of_round and not context.individual and not context.repetition and not context.blueprint then
-            if G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers["v_mme_boot_unlock"] then
+            if voucher_active then
                 local target_limit = G.consumeables.config.card_limit + (G.GAME.consumeable_buffer or 0)
                 if #G.consumeables.cards < target_limit then
                     G.GAME.consumeable_buffer = (G.GAME.consumeable_buffer or 0) + 1

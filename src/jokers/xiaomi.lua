@@ -1,10 +1,11 @@
 SMODS.Joker {
     key = "xiaomi",
-    atlas = "placeholders",
-    pos = { x = 2, y = 0 },
+    atlas = "bootloaders",
+    pos = { x = 3, y = 0 },
     discovered = true,
     rarity = 3,
     cost = 5,
+    pools = { ["Phones"] = true },
     config = {
         extra = {
             invis_rounds = 0,
@@ -23,11 +24,13 @@ SMODS.Joker {
         return { vars = { card.ability.extra.invis_rounds, card.ability.extra.total_rounds, card.ability.extra.Xmult, odds_num, odds_den, status_text } }
     end,
     calculate = function(self, card, context)
+        local voucher_active = G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers['v_mme_boot_unlock']
+
         if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
             if not card.ability.extra.triggered then
                 card.ability.extra.invis_rounds = card.ability.extra.invis_rounds + 1
 
-                if card.ability.extra.invis_rounds >= card.ability.extra.total_rounds or (G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers['v_mme_boot_unlock']) then
+                if card.ability.extra.invis_rounds >= card.ability.extra.total_rounds or voucher_active then
                     card.ability.extra.triggered = true
                     return {
                         message = "Unlocked!",
@@ -44,7 +47,7 @@ SMODS.Joker {
 
 
         if context.joker_main then
-            if (G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers["v_mme_boot_unlock"]) or card.ability.extra.triggered then
+            if voucher_active or card.ability.extra.triggered then
                 return {
                     xmult = card.ability.extra.Xmult,
                 }
@@ -52,7 +55,7 @@ SMODS.Joker {
         end
 
         if context.end_of_round and not context.individual and not context.repetition and not context.blueprint then
-            if (G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers["v_mme_boot_unlock"]) or card.ability.extra.triggered then
+            if voucher_active or card.ability.extra.triggered then
                 if SMODS.pseudorandom_probability(card, "mme_expire", 1, card.ability.extra.odds) then
                     card:start_dissolve(nil, nil)
                     G.FUNCS.overlay_menu {

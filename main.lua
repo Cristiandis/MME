@@ -7,6 +7,28 @@ SMODS.Atlas({
     py = 95
 })
 
+SMODS.Atlas({
+    key = "bootloaders",
+    path = "bootloaders.png",
+    px = 71,
+    py = 95
+})
+
+
+
+--#endregion
+
+--#region objects
+
+SMODS.ObjectType {
+    key = "Phones",
+    cards = {
+        ["j_mme_xiaomi"] = true,
+        ["j_mme_samsung"] = true,
+        ["j_mme_google"] = true,
+        ["j_mme_huawei"] = true
+    }
+}
 
 --#endregion
 
@@ -42,6 +64,12 @@ local vouchers_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/
 
 for _, file in ipairs(vouchers_src) do
     assert(SMODS.load_file("src/vouchers/" .. file))()
+end
+
+local boosters_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/boosters")
+
+for _, file in ipairs(boosters_src) do
+    assert(SMODS.load_file("src/boosters/" .. file))()
 end
 
 --#endregion

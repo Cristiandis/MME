@@ -1,10 +1,11 @@
 SMODS.Joker {
     key = "huawei",
-    atlas = "placeholders",
-    pos = { x = 2, y = 0 },
+    atlas = "bootloaders",
+    pos = { x = 1, y = 0 },
     discovered = true,
     rarity = 3,
     cost = 5,
+    pools = { ["Phones"] = true },
     config = {
         extra = {
             chips = 100,
@@ -21,6 +22,8 @@ SMODS.Joker {
         return { vars = { card.ability.extra.chips, card.ability.extra.Xmult, odds_num, odds_den, status_text } }
     end,
     calculate = function(self, card, context)
+        local voucher_active = G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers['v_mme_boot_unlock']
+
         if context.individual and context.cardarea == G.hand and not context.end_of_round then
             if SMODS.has_enhancement(context.other_card, "m_steel") then
                 return {
@@ -32,7 +35,7 @@ SMODS.Joker {
 
 
         if context.joker_main then
-            if G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers["v_mme_boot_unlock"] then
+            if voucher_active then
                 return {
                     xmult = card.ability.extra.Xmult,
                 }
@@ -40,7 +43,7 @@ SMODS.Joker {
         end
 
         if context.end_of_round and not context.individual and not context.repetition and not context.blueprint then
-            if G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers["v_mme_boot_unlock"] then
+            if voucher_active then
                 if SMODS.pseudorandom_probability(card, "mme_expire", 1, card.ability.extra.odds) then
                     card:start_dissolve(nil, nil)
                     return {
