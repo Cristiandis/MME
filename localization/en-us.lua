@@ -25,6 +25,33 @@ return {
                     "Score {C:attention}half{} {X:chips}chips{}"
                 }
             }
+        },
+        Voucher = {
+            v_mme_boot_unlock = {
+                name = "Bootloader Unlock",
+                text = {
+                    "Unlocks the bootloader of {C:red}phone jokers{}",
+                    "{C:edition}(extra effects){}"
+                }
+            }
+        },
+        Joker = {
+            j_mme_huawei = {
+                name = "Huawei",
+                text = {
+                    {
+                        "{C:chips}+#1# chips{} per {C:attention}Steel Card{}"
+                    },
+                    {
+                        "{C:edition}If bootloader is unlocked{}",
+                        "{C:mult}X#2#{} Mult",
+                        "{C:green}#3# in #4#{} chance this",
+                        "card is destroyed",
+                        "at end of round",
+                        "{C:blue}Status: {C:attention}#5#"
+                    },
+                }
+            }
         }
     },
     misc = {
