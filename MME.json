@@ -1,0 +1,14 @@
+{
+  "id": "MME",
+  "name": "Mobile Modding Experience",
+  "display_name": "MME",
+  "author": ["Cristiandis", "Bizzerowasnotavailable"],
+  "description": "A balatro mod inspired by mobile modding",
+  "prefix": "mme",
+  "main_file": "main.lua",
+  "priority": 0,
+  "badge_colour": "ff6900",
+  "badge_text_colour": "FFFFFF",
+  "version": "0.0.1",
+  "dependencies": []
+}
