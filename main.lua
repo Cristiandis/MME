@@ -30,4 +30,10 @@ for _, file in ipairs(consumables_src) do
     assert(SMODS.load_file("src/consumables/" .. file))()
 end
 
+local blinds_src = SMODS.NFS.getDirectoryItems(SMODS.current_mod.path .. "src/blinds")
+
+for _, file in ipairs(blinds_src) do
+    assert(SMODS.load_file("src/blinds/" .. file))()
+end
+
 --#endregion

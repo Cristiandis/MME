@@ -9,5 +9,6 @@ SMODS.Seal {
     key = "integrity",
     badge_colour = HEX("008000"),
     atlas = "integrity_seal",
-    pos = { x = 0, y = 0 }
+    pos = { x = 0, y = 0 },
+    discovered = true
 }

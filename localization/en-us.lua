@@ -16,11 +16,23 @@ return {
                     "to all cards held in hand"
                 }
             }
+        },
+        Blind = {
+            bl_mme_mcdonalds = {
+                name = "McDonald's App",
+                text = {
+                    "Cards without Integrity Seal",
+                    "Score {C:attention}half{} {X:chips}chips{}"
+                }
+            }
         }
     },
     misc = {
         labels = {
             mme_integrity_seal = "Integrity"
+        },
+        dictionary = {
+            bl_mcdonalds_msg = "Halved!"
         }
     }
 }
