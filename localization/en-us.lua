@@ -70,6 +70,22 @@ return {
                         "{C:blue}Status: {C:attention}#4#"
                     },
                 }
+            },
+            j_mme_xiaomi = {
+                name = "Xiaomi",
+                text = {
+                    {
+                        "{C:green}#1#/#2#{} rounds to {C:edition}unlock the bootloader{}"
+                    },
+                    {
+                        "{C:edition}If bootloader is unlocked{}",
+                        "{C:mult}X#3#{} Mult",
+                        "{C:green}#4# in #5#{} chance this",
+                        "card is destroyed",
+                        "at end of round",
+                        "{C:blue}Status: {C:attention}#6#"
+                    },
+                }
             }
         }
     },
