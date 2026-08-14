@@ -51,6 +51,25 @@ return {
                         "{C:blue}Status: {C:attention}#5#"
                     },
                 }
+            },
+            j_mme_samsung = {
+                name = "Samsung",
+                text = {
+                    {
+                        "{C:mult}X#2#{} Mult",
+                        "Earn {C:money}$#1#{} at",
+                        "end of round",
+                    },
+                    {
+                        "{C:edition}If bootloader is unlocked{}",
+                        "{C:red}NO{} end of round {C:money}bonus money{}",
+                        "Creates the {C:planet}Planet{} card",
+                        "for final played {C:attention}poker hand{}",
+                        "of round if {C:attention}held{} in hand",
+                        "{C:inactive}(Must have room)",
+                        "{C:blue}Status: {C:attention}#4#"
+                    },
+                }
             }
         }
     },
