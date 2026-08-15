@@ -1,7 +1,7 @@
 SMODS.Voucher {
     key = 'boot_unlock',
     atlas = "bootloaders",
-    pos = { x = 4, y = 0 },
+    pos = { x = 1, y = 3 },
     cost = 8,
     discovered = true,
 }

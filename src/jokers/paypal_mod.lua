@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "paypal_mod",
     atlas = "bootloaders",
-    pos = { x = 5, y = 0 },
+    pos = { x = 4, y = 0 },
     cost = 2,
     rarity = 2,
     blueprint_compat = false,

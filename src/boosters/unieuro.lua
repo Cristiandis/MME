@@ -1,13 +1,6 @@
-SMODS.Atlas {
-    key = "unieuro",
-    path = "unieuro.png",
-    px = 71,
-    py = 96
-}
-
 SMODS.Booster {
     key = "unieuro",
-    atlas = "unieuro",
+    atlas = "boosters",
     pos = { x = 0, y = 0 },
     cost = 5,
     discovered = true,
