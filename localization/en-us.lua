@@ -32,6 +32,13 @@ return {
                     "Cards without Integrity Seal",
                     "Score {C:attention}half{} {X:chips}chips{}"
                 }
+            },
+            bl_mme_sp_flash_tool = {
+                name = "SP Flash Tool",
+                text = { "{C:red}Locks bootloader{}",
+                    "All cards without Integrity Seal",
+                    "are debuffed"
+                }
             }
         },
         Voucher = {
@@ -116,6 +123,12 @@ return {
                     "Gives {C:money}#1#${} at the end of every round",
                     "{C:green}#2# in #3#{} chance to",
                     "set money to {C:red}0${}",
+                }
+            },
+            j_mme_gaster = {
+                name = "{X:green}Gaster{}",
+                text = {
+                    "{C:green}Makes the game{} {X:green}25%{} {C:green}more green{}"
                 }
             }
         }

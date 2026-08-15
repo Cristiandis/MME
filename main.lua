@@ -24,6 +24,15 @@ SMODS.Atlas {
 
 --#endregion
 
+--#region shaders
+
+SMODS.Shader {
+    key = "green_overlay",
+    path = "green_overlay.fs"
+}
+
+--#endregion
+
 --#region objects
 
 SMODS.ObjectType {
