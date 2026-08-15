@@ -5,6 +5,42 @@ SMODS.Joker {
     discovered = true,
     rarity = 1,
     cost = 7,
+    calculate = function(self, card, context)
+        if context.setting_blind and not context.blueprint and context.blind.boss then
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    G.E_MANAGER:add_event(Event({
+                        func = function()
+                            if G.GAME.blind.name == "The Wheel" or G.GAME.blind.name == "The Serpent" or G.GAME.blind.name == "The Needle" or G.GAME.blind.name == "Verdant Leaf" or G.GAME.blind.name == "bl_mme_sp_flash_tool" then
+                                G.GAME.blind:disable()
+                                play_sound('timpani')
+                                delay(0.4)
+                                SMODS.calculate_effect(
+                                    { message = localize('ph_boss_disabled'), font = "mme_WingDings", colour = G.C.GREEN },
+                                    card)
+                            end
+                            return true
+                        end
+                    }))
+
+                    return true
+                end
+            }))
+            return nil, true
+        end
+    end,
+    add_to_deck = function(self, card, from_debuff)
+        if G.GAME.blind and G.GAME.blind.boss and not G.GAME.blind.disabled then
+            if G.GAME.blind.name == "The Wheel" or G.GAME.blind.name == "The Serpent" or G.GAME.blind.name == "The Needle" or G.GAME.blind.name == "Verdant Leaf" or G.GAME.blind.name == "bl_mme_sp_flash_tool" then
+                G.GAME.blind:disable()
+                play_sound('timpani')
+
+                SMODS.calculate_effect(
+                    { message = localize('ph_boss_disabled'), font = "mme_WingDings", colour = G.C.GREEN },
+                    card)
+            end
+        end
+    end
 }
 
 local function count_green()

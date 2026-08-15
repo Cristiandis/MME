@@ -128,7 +128,13 @@ return {
             j_mme_gaster = {
                 name = "{X:green}Gaster{}",
                 text = {
-                    "{C:green}Makes the game{} {X:green}25%{} {C:green}more green{}"
+                    {
+                        "{C:green}Makes the game{} {X:green}25%{} {C:green}more green{}"
+                    },
+                    {
+                        "{C:green}Disables all{} {X:green}green{} {C:green} boss blinds{}"
+                    }
+
                 }
             }
         }

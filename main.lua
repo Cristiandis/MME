@@ -24,11 +24,16 @@ SMODS.Atlas {
 
 --#endregion
 
---#region shaders
+--#region assets
 
 SMODS.Shader {
     key = "green_overlay",
     path = "green_overlay.fs"
+}
+
+SMODS.Font {
+    key = "WingDings",
+    path = "Wingdings-Regular.ttf",
 }
 
 --#endregion
