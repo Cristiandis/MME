@@ -136,6 +136,14 @@ return {
                     }
 
                 }
+            },
+            j_mme_un_anno = {
+                name = "It's been 1 ante",
+                text = {
+                    "This Joker gains {C:mult}+#2#{} Mult",
+                    "at the end of every ante",
+                    "{C:inactive}(Currently {C:mult}#1#{C:inactive} Mult)",
+                },
             }
         },
         Tag = {
