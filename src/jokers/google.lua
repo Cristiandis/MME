@@ -81,6 +81,8 @@ SMODS.Joker {
                         delay = 0.2,
                         func = function()
                             lowest:start_dissolve(nil, true)
+                            G.hand:remove_card(lowest)
+                            lowest:remove()
                             return true
                         end
                     }))
