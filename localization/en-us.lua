@@ -137,6 +137,15 @@ return {
 
                 }
             }
+        },
+        Tag = {
+            tag_mme_rand_vid = {
+                name = "Play AD",
+                text = {
+                    "Gives {C:money}#1#${}",
+                    "Plays an AD"
+                }
+            }
         }
     },
     misc = {
