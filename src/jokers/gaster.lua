@@ -3,7 +3,7 @@ SMODS.Joker {
     atlas = "bootloaders",
     pos = { x = 0, y = 1 },
     discovered = true,
-    rarity = 1,
+    rarity = 2,
     cost = 7,
     calculate = function(self, card, context)
         if context.setting_blind and not context.blueprint and context.blind.boss then
