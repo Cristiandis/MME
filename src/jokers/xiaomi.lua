@@ -27,10 +27,10 @@ SMODS.Joker {
         local voucher_active = G.GAME and G.GAME.used_vouchers and G.GAME.used_vouchers['v_mme_boot_unlock']
 
         if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
-            if not card.ability.extra.triggered then
+            if not card.ability.extra.triggered and not voucher_active then
                 card.ability.extra.invis_rounds = card.ability.extra.invis_rounds + 1
 
-                if card.ability.extra.invis_rounds >= card.ability.extra.total_rounds or voucher_active then
+                if card.ability.extra.invis_rounds >= card.ability.extra.total_rounds then
                     card.ability.extra.triggered = true
                     return {
                         message = "Unlocked!",
