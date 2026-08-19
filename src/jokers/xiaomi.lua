@@ -59,7 +59,7 @@ SMODS.Joker {
                 if SMODS.pseudorandom_probability(card, "mme_expire", 1, card.ability.extra.odds) then
                     card:start_dissolve(nil, nil)
                     G.FUNCS.overlay_menu {
-                        definition = create_UIBox_custom_video1("hardbrick", "Womp Womp"),
+                        definition = create_UIBox_mme_custom_video1("hardbrick", "Womp Womp"),
                         config = { no_esc = true }
                     }
                     return {

@@ -28,7 +28,7 @@ SMODS.Tag {
         tag:yep('+', G.C.DARK_EDITION, print())
 
         G.FUNCS.overlay_menu {
-            definition = create_UIBox_custom_video1(chosen_video, "Skip AD"),
+            definition = create_UIBox_mme_custom_video1(chosen_video, "Skip AD"),
             config = { no_esc = true }
         }
 
