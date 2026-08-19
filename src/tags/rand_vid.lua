@@ -12,7 +12,7 @@ SMODS.Tag {
     discovered = true,
     config = {
         extra = {
-            video_options = { "xbox_live", "superbowl", "bad_apple", "macarena", "mcflurry", "balatro", "pizzeria", "family_guy", "golf", "goku", "google", "death", "pigeon", "undertale", "fuckyou", "horses", "slap", "bitch" },
+            video_options = { "xbox_live", "superbowl", "bad_apple", "macarena", "mcflurry", "balatro", "pizzeria", "family_guy", "golf", "goku", "google", "death", "pigeon", "undertale", "fuckyou", "horses", "shut_fuck", "bitch" },
             dollars = 5
         }
     },
